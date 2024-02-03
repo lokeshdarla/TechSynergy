@@ -10,7 +10,7 @@ import logo from '@/public/logo.png';
 function Footer() {
   return (
     <div className='flex items-center justify-center flex-col gap-[40px] min-w-[1174px] my-5 font-secondary'>
-      <div className='flex items-start justify-between w-[1174px]'>
+      <div className='flex items-start justify-between w-[1174px] flex-wrap'>
         <div className='text-gray-400 flex flex-col gap-[10px] font-secondary leading-[28px]'>
           <h3 className='text-[#0A142F]'>Product</h3>
           <p>Employee database</p>
