@@ -3,6 +3,7 @@ import Image from 'next/image';
 import vector1 from '@/public/vector1.png';
 import ServiceCard from './Card/ServiceCard';
 import vector2 from '@/public/vector2.png'
+import TestimonalCard from './Card/TestimonalCard';
 
 function Services() {
   const UX_serviceInfo = {
@@ -39,31 +40,28 @@ function Services() {
     description: 'Create custom software tailored for your unique needs, including front-end, and core back-end technology.',
   };
   return (
-    <div className='flex items-center justify-center mt-20 flex-col'>
-      <div className='flex items-center justify-center gap-[18px] w-[841px] pt-20'>
-        <Image src={vector1} alt="Vector 1" width={100} height={100} />
-        <h1 className='text-[40px]'>Empowering Your Digital Vision: Our Comprehensive Tech Services.</h1>
-      </div>
-      <div className='relative flex flex-col m-10 gap-10'>
+    <div className='relative flex items-center justify-center mt-20 flex-col'>
+    <div className='flex items-center justify-center gap-[18px] w-[841px] pt-20 '>
+      <Image src={vector1} alt="Vector 1" width={100} height={100} />
+      <h1 className='text-[40px]'>Empowering Your Digital Vision: Our Comprehensive Tech Services.</h1>
+    </div>
+    <div className='relative flex flex-col m-10 gap-10'>
       <div className='absolute top-[37%] left-[62%] z-0'>
-        <Image src={vector2} alt="Vector 2" width={175} height={175}/>
+        <Image src={vector2} alt="Vector 2" width={175} height={175} />
       </div>
-      <div className='absolute top-1/2 left-[20%] transform translate-x-1/2 translate-y-1/2 z-10'>
+      <div className='absolute top-1/2 left-[20%] transform translate-x-1/2 translate-y-1/2 z-0'>
         <Image src={vector1} alt="Vector 1" width={175} height={175} />
       </div>
-      <div className='z-10 flex items-center justify-center flex-wrap gap-[52px]'>
+      <div className='z-10 flex items-start justify-start overflow-x-scroll mx-10 hide-scrollbar w-full'>
         <ServiceCard teamCategoryInfo={SoftwareInfo} />
         <ServiceCard teamCategoryInfo={QAtestingInfo} />
         <ServiceCard teamCategoryInfo={AIServiceInfo} />
-      </div>
-      <div className='z-10 flex items-center justify-center flex-wrap gap-[52px]'>
-      <ServiceCard teamCategoryInfo={UX_serviceInfo} />
+        <ServiceCard teamCategoryInfo={UX_serviceInfo} />
         <ServiceCard teamCategoryInfo={mobile_serviceInfo} />
         <ServiceCard teamCategoryInfo={platform_serviceInfo} />
       </div>
     </div>
-     
-    </div>
+  </div>
   );
 }
 

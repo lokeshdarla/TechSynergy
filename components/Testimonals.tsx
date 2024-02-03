@@ -7,7 +7,7 @@ import { MdNavigateBefore } from "react-icons/md";
 
 function Testimonals() {
   const UX_serviceInfo = {
-    icon: '/ux_ui_icon.png', // Update with the correct relative path from the public directory
+    icon: '/ux_ui_icon.png',
     name: 'UX/UI Design',
     description: 'Create beautiful, pixel-perfect, and easy-to-use designs that delight your end users.',
   };

@@ -11,7 +11,7 @@ const TeamCategoryCard: React.FC<{ teamCategoryInfo: TeamInfo }> = ({ teamCatego
       </div>
       <div className="text-xl gap-5 flex flex-col">
         <h3 className='text-[28px]'>{teamCategoryInfo.name}</h3>
-        <p className='text-lg leading-[24px] font-[400] text-[#525252]'>{teamCategoryInfo.description}</p>
+        <p className='md:text-[16px] text-[13px] leading-[24px] font-[400] text-[#525252]'>{teamCategoryInfo.description}</p>
       </div>
     </div>
   );
