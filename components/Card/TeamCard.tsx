@@ -1,6 +1,5 @@
-
 import React from 'react';
-import TeamInfo from '@/constants/index';
+import {TeamInfo} from '@/constants/index';
 import Image from 'next/image';
 
 const TeamCategoryCard: React.FC<{ teamCategoryInfo: TeamInfo }> = ({ teamCategoryInfo }) => {

@@ -4,19 +4,19 @@ import TeamCategoryCard from '@/components/Card/TeamCard';
 
 function Teams() {
   const frontendInfo = {
-    icon: '/frontend_icon.png', // Update with the correct relative path from the public directory
+    icon: '/frontend_icon.png',
     name: 'Front-end',
     description: 'Our frontend developers understand the delicate balance between aesthetics and functionality.',
   };
 
   const backendInfo = {
-    icon: '/backend_icon.png', // Update with the correct relative path from the public directory
+    icon: '/backend_icon.png', 
     name: 'Back-end',
     description: 'Our backend developers are the architects of efficiency and security. They design and build the databases and APIs.',
   };
 
   const dataAnalystsInfo = {
-    icon: '/data_icon.png', // Update with the correct relative path from the public directory
+    icon: '/data_icon.png',
     name: 'Data Analysts',
     description: 'Our data analytics team is a blend of mathematicians, statisticians, and technology enthusiasts.',
   };

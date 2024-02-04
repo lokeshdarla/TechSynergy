@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import Image from 'next/image';
-import hero from '@/public/Image/pexels-canva-studio-3153201_1.png';
+import hero from '@/public/Image/hero.png';
 
 
 const Hero: React.FC = () => {
