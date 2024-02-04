@@ -1,6 +1,8 @@
 import React from 'react'
 import team from '@/public/Image/team.png'
 import Image from 'next/image'
+import Button from '../ui/Button'
+
 function Transform() {
   return (
     <div className='min-h-[964px] relative '>
@@ -9,7 +11,7 @@ function Transform() {
       <h1 className='font-secondary md:leading-[68px] md:text-[48px] text-[32px] leading-[48px]  text-[#FFFFFF] text-center'>
         Ready to Transform Your Vision into Reality? Let's Get Started!
       </h1>
-      <button className='bg-white px-6 py-3 rounded-full text-[#5E5DEF]'>Schedule a Call</button>
+      <Button text='Schedule a Call' type='secondary' />
       </div>
     </div>
     <div className='absolute md:left-[23%] md:top-[38%] top-[50%] left-[5%]'>
