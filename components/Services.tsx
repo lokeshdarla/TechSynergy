@@ -40,19 +40,20 @@ function Services() {
     description: 'Create custom software tailored for your unique needs, including front-end, and core back-end technology.',
   };
   return (
-    <div className='relative flex items-center justify-center mt-20 flex-col'>
-    <div className='flex items-center justify-center gap-[18px] w-[841px] pt-20 '>
-      <Image src={vector1} alt="Vector 1" width={100} height={100} />
-      <h1 className='text-[40px]'>Empowering Your Digital Vision: Our Comprehensive Tech Services.</h1>
+    <>
+      <div className='relative flex items-center justify-center mt-20 flex-col'>
+    <div className='flex items-start md:items-center w-[350px] font-secondary md:justify-center justify-start gap-[18px] md:w-[841px] pt-20 '>
+      <Image src={vector1} alt="Vector 1" width={100} height={100} className='h-[60px] md:h-[80.88px]'/>
+      <h1 className='md:text-[40px] text-[25px]'>Empowering Your Digital Vision: Our Comprehensive Tech Services.</h1>
     </div>
-    <div className='relative flex flex-col m-10 gap-10'>
-      <div className='absolute top-[37%] left-[62%] z-0'>
+    <div className='relative flex flex-col m-10 gap-10 '>
+      <div className='absolute top-[37%] left-[62%] z-0 hidden md:block'>
         <Image src={vector2} alt="Vector 2" width={175} height={175} />
       </div>
-      <div className='absolute top-1/2 left-[20%] transform translate-x-1/2 translate-y-1/2 z-0'>
+      <div className='absolute top-1/2 left-[20%] transform translate-x-1/2 translate-y-1/2 z-0 hidden md:block'>
         <Image src={vector1} alt="Vector 1" width={175} height={175} />
       </div>
-      <div className='z-10 flex items-start justify-start overflow-x-scroll mx-10 hide-scrollbar w-full'>
+      <div className='z-10 flex flex-row items-center md:grid md:grid-cols-3 md:w-full justify-start md:gap-2 w-[400px] h-[400px] hide-scrollbar md:px-5 overflow-x-scroll md:mx-0 hide-scrollbar'>
         <ServiceCard teamCategoryInfo={SoftwareInfo} />
         <ServiceCard teamCategoryInfo={QAtestingInfo} />
         <ServiceCard teamCategoryInfo={AIServiceInfo} />
@@ -62,6 +63,8 @@ function Services() {
       </div>
     </div>
   </div>
+    </>
+  
   );
 }
 

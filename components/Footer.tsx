@@ -9,9 +9,10 @@ import logo from '@/public/logo.png';
 
 function Footer() {
   return (
-    <div className='flex items-center justify-center flex-col gap-[40px] min-w-[1174px] my-5 font-secondary'>
-      <div className='flex items-start justify-between w-[1174px] flex-wrap'>
-        <div className='text-gray-400 flex flex-col gap-[10px] font-secondary leading-[28px]'>
+    <div className='flex items-center justify-center flex-col gap-[40px] md:min-w-[1174px] md:my-5 font-secondary'>
+      <div className='flex flex-col md:flex-row items-start md:justify-between justify-center md:w-[1174px] w-full flex-wrap gap-[10px] '>
+        <div className='flex flex-row-reverse items-start md:gap-[150px] justify-evenly gap-[30px] px-10 md:px-0'>
+        <div className='text-gray-400 flex flex-col gap-[10px] font-secondary leading-[28px] '>
           <h3 className='text-[#0A142F]'>Product</h3>
           <p>Employee database</p>
           <p>Payroll</p>
@@ -26,7 +27,8 @@ function Footer() {
           <p>Blog</p>
           <p>Support</p>
         </div>
-        <div className='text-gray-400 flex flex-col gap-[10px] font-secondary leading-[28px]'>
+        </div>
+        <div className='text-gray-400 flex flex-col gap-[10px] font-secondary leading-[28px] px-10'>
           <h3 className='text-[#0A142F]'>Company</h3>
           <p>About us</p>
           <p>Careers</p>
@@ -45,7 +47,7 @@ function Footer() {
         </div>
       </div>
       <hr className='border border-gray-200 w-[1174px]' />
-      <div className='flex items-center justify-between w-[1174px]'>
+      <div className='flex items-center md:justify-between md:w-[1174px] flex-wrap-reverse justify-evenly'>
         <div className='min-w-[236.11px]'>
         <Image height={50} src={logo} alt="" />
         </div>
