@@ -1,5 +1,6 @@
 'use client'
 import React from 'react';
+import { useRef } from 'react';
 import Image from 'next/image';
 import testimonal_main from '@/public/testimonals/testimonal_main.png';
 import TestimonalCard from '../Card/TestimonalCard';
@@ -8,6 +9,16 @@ import { MdNavigateBefore } from "react-icons/md";
 import testimonials from './testimonalData';
 
 function Testimonals() {
+  const myRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = (scrollAmount: number) => {
+    const container = myRef.current;
+
+    if (container) {
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+  
   return (
     <>
       <div className='relative flex flex-col items-center justify-end md:h-[1160px] py-5 gap-[38px] my-20'>
@@ -21,15 +32,19 @@ function Testimonals() {
           </div>
         </div>
 
-        <div className='flex md:gap-[38px] items-start justify-start hide-scrollbar overflow-x-scroll w-full md:h-[600px] h-[360.66px] md:ml-[100px]'>
-          {testimonials.map((testimonial) => (
-            <TestimonalCard testimonalInfo={testimonial} key={testimonial.name} />
-          ))}
+        <div className='flex md:gap-[38px] items-start justify-start hide-scrollbar overflow-x-scroll w-full md:h-[600px] h-[360.66px] md:ml-[100px]' ref={myRef}>
+        {testimonials.map((testimonial, index) => (
+          <TestimonalCard testimonalInfo={testimonial} key={testimonial.name}/>
+        ))}
         </div>
 
         <div className='flex items-center justify-center gap-5'>
-          <button className='p-2 rounded-full bg-[#F7F7FD] font-thin text-[#292D32]'><MdNavigateBefore size={40} width={1} /></button>
-          <button className='p-2 rounded-full bg-[#F7F7FD] font-thin text-[#292D32]'><MdNavigateNext size={40} /></button>
+        <button className='p-2 rounded-full bg-[#F7F7FD] font-thin text-[#292D32]' onClick={() => handleScroll(-500)}>
+          <MdNavigateBefore size={40} width={1} />
+        </button>
+        <button className='p-2 rounded-full bg-[#F7F7FD] font-thin text-[#292D32]' onClick={() => handleScroll(500)}>
+        <MdNavigateNext size={40} />
+      </button>
         </div>
       </div>
     </>

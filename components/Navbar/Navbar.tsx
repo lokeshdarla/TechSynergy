@@ -24,10 +24,10 @@ const Navbar = () => {
           md:w-auto flex items-start py-5 px-5 z-5 w-full md:top-[0%]`}
         >
           <div className="flex md:flex-row flex-col-reverse md:items-center md:gap-[4vw] gap-8 md:bg-[#F7F7FD] md:px-20 md:py-3 md:rounded-full md:text-[16px] text-[18px] w-full items-center">
-            <Link href="#Home" className='text-[#3056D3]'>Home</Link>
-            <Link href="#">About Us</Link>
-            <Link href="#">Services</Link>
-            <Link href="#">Contact Us</Link>
+            <Link href="/" className='text-[#3056D3]'>Home</Link>
+            <Link href="/about-us">About Us</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/contact-us">Contact Us</Link>
           </div>
         </div>
         <div className="flex items-center gap-6">

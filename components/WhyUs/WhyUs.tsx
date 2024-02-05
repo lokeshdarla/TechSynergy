@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import { MdNavigateNext, MdNavigateBefore } from 'react-icons/md';
@@ -7,7 +8,20 @@ import vector2 from '@/public/vectors/vector2.png';
 import vector1 from '@/public/vectors/vector1.png';
 
 function WhyUs() {
+  const myRef = React.useRef<HTMLDivElement>(null);
+
+  const handleScroll = (scrollAmount: number) => {
+    const container = myRef.current;
+
+    if (container) {
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
   const expertiseCardsInfo = [
+    { gradientColors: 'bg-gradient-to-tr to-[#3171DE] from-[#4AC0F2]', title: 'Expertise Across the Tech Spectrum', description: 'Our team consists of seasoned developers, designers, and experts who excel in various areas of technology.' },
+    { gradientColors: 'bg-gradient-to-tr to-[#62AE6E] from-[#e1d43e]', title: 'Expertise Across the Tech Spectrum', description: 'Our team consists of seasoned developers, designers, and experts who excel in various areas of technology.' },
+    { title: 'Expertise Across the Tech Spectrum', description: 'Our team consists of seasoned developers, designers, and experts who excel in various areas of technology.' },
+    { gradientColors: 'bg-gradient-to-tr to-[#3171DE] from-[#4AC0F2]', title: 'Expertise Across the Tech Spectrum', description: 'Our team consists of seasoned developers, designers, and experts who excel in various areas of technology.' },
     { gradientColors: 'bg-gradient-to-tr to-[#3171DE] from-[#4AC0F2]', title: 'Expertise Across the Tech Spectrum', description: 'Our team consists of seasoned developers, designers, and experts who excel in various areas of technology.' },
     { gradientColors: 'bg-gradient-to-tr to-[#62AE6E] from-[#e1d43e]', title: 'Expertise Across the Tech Spectrum', description: 'Our team consists of seasoned developers, designers, and experts who excel in various areas of technology.' },
     { title: 'Expertise Across the Tech Spectrum', description: 'Our team consists of seasoned developers, designers, and experts who excel in various areas of technology.' },
@@ -28,17 +42,17 @@ function WhyUs() {
         </h2>
       </div>
 
-      <div className='flex items-center justify-start gap-10 overflow-x-scroll md:w-[1344px] w-[90%]  h-[300px] hide-scrollbar px-5'>
+      <div className='flex items-center justify-start gap-10 overflow-x-scroll md:w-[1344px] w-[90%]  h-[300px] hide-scrollbar px-5' ref={myRef}>
       {expertiseCardsInfo.map((card, index) => (
         <TechExpertiseCard key={index} techExpertiseInfo={card} />
       ))}
       </div>
 
       <div className='flex items-center justify-center gap-5'>
-        <button className='p-2 rounded-full bg-[#ffff] font-thin text-[#292D32]'>
+        <button className='p-2 rounded-full bg-[#ffff] font-thin text-[#292D32]' onClick={()=>{handleScroll(-400)}}>
           <MdNavigateBefore size={40} />
         </button>
-        <button className='p-2 rounded-full bg-[#ffff] font-thin text-[#292D32]'>
+        <button className='p-2 rounded-full bg-[#ffff] font-thin text-[#292D32]' onClick={()=>{handleScroll(400)}}>
           <MdNavigateNext size={40} />
         </button>
       </div>

@@ -6,6 +6,7 @@ import crew_2 from '@/public/crew/crew_2.png';
 import crew_3 from '@/public/crew/crew_3.png';
 import crew_4 from '@/public/crew/crew_4.png';
 import crew_5 from '@/public/crew/crew_5.png';
+import Button from '../ui/Button';
 
 function Crew() {
   return (
@@ -32,7 +33,7 @@ function Crew() {
 
       <div className='flex items-center justify-center flex-col md:gap-14 gap-8'>
         <h2 className='md:text-[40px] md:leading-[62px] leading-[62px] text-[26px]'>Let's Form Your Crew.</h2>
-        <button className='bg-[#3171DE] px-6 py-3 rounded-full text-[#FFFFFF]'>Schedule a Call</button>
+        <Button text='Schedule a Call' type='primary'/>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import vector2 from '@/public/vectors/vector2.png'
 import { FaFacebook, FaAirbnb, FaApple, FaSass, FaQuora} from "react-icons/fa";
 import { TbBrandDisney } from "react-icons/tb";
 import { SiSamsung } from "react-icons/si";
+import Button from '../ui/Button';
 
 function Organisations() {
 
@@ -46,7 +47,7 @@ function Organisations() {
         ))}
       </ul>
     </div>
-    <button className='bg-[#3171DE] py-[18px] px-[34px] rounded-[50px] text-white'>Our full repertories</button>
+    <Button text='Our full repertories' type='primary'/>
       </div>
     </div>
   )
