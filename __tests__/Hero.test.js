@@ -1,11 +1,9 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import Hero from './Hero';
-
-jest.mock('next/image', () => ({ src, alt }) => <img src={src} alt={alt} />);
+import Hero from '@/components/Hero/Hero';
 
 describe('Hero component', () => {
-  it('renders Hero component with GradientBackground, TitleSection, and HeroImage', () => {
+  it('renders Hero component with GradientBackground, TitleSection', () => {
     render(<Hero />);
 
     // Test GradientBackground rendering
@@ -16,11 +14,5 @@ describe('Hero component', () => {
     const titleSection = screen.getByTestId('title-section');
     expect(titleSection).toBeInTheDocument();
     expect(titleSection).toHaveTextContent('TECH SERVICES');
-
-    // Test HeroImage rendering
-    const heroImage = screen.getByAltText('Hero Image');
-    expect(heroImage).toBeInTheDocument();
-    expect(heroImage).toHaveAttribute('src', '/hero.png');
-    expect(heroImage).toHaveAttribute('alt', 'Hero Image');
   });
 });

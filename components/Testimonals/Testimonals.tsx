@@ -42,7 +42,7 @@ function Testimonals() {
         <button className='p-2 rounded-full bg-[#F7F7FD] font-thin text-[#292D32]' onClick={() => handleScroll(-500)}>
           <MdNavigateBefore size={40} width={1} />
         </button>
-        <button className='p-2 rounded-full bg-[#F7F7FD] font-thin text-[#292D32]' onClick={() => handleScroll(500)}>
+        <button className='p-2 rounded-full bg-[#F7F7FD] font-thin text-[#292D32]' onClick={() => handleScroll(380)}>
         <MdNavigateNext size={40} />
       </button>
         </div>

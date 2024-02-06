@@ -158,7 +158,6 @@ body {
 }
 
 
-
 /* Slider */
 .slider {
   position: relative;
@@ -185,5 +184,3 @@ body {
     transform: translateX(0);
   }
 }
-
-

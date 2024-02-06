@@ -1,30 +1,38 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import TechExpertiseCard from '@/components/card/TechExpertiseCard'
+import TechExpertiseCard from '@/components/card/TechExpertiseCard';
 
 const mockTechExpertiseInfo = {
-  title: 'Tech Expertise Title',
-  description: 'Tech Expertise Description',
-  gradientColors: 'gradient-class',
+  title: 'Test Title',
+  description: 'Test Description',
 };
 
-
 describe('TechExpertiseCard component', () => {
-  it('renders TechExpertiseCard with provided techExpertiseInfo', () => {
-    render(<TechExpertiseCard techExpertiseInfo={mockTechExpertiseInfo} />);
-    const title = screen.getByText(mockTechExpertiseInfo.title);
-    expect(title).toBeInTheDocument();
-
-    const description = screen.getByText(mockTechExpertiseInfo.description);
-    expect(description).toBeInTheDocument();
+  it('renders TechExpertiseCard with primary cardType', () => {
+    render(<TechExpertiseCard techExpertiseInfo={mockTechExpertiseInfo} cardType="primary" />);
+    
+    const card = screen.getByTestId('tech-expertise-card');
+    expect(card).toHaveClass('bg-gradient-to-tr to-[#3171DE] from-[#4AC0F2]');
+    expect(screen.getByText('Test Title')).toBeInTheDocument();
+    expect(screen.getByText('Test Description')).toBeInTheDocument();
   });
 
-  it('applies gradient colors class when gradientColors is provided', () => {
-    render(<TechExpertiseCard techExpertiseInfo={mockTechExpertiseInfo} />);
+  it('renders TechExpertiseCard with secondary cardType', () => {
+    render(<TechExpertiseCard techExpertiseInfo={mockTechExpertiseInfo} cardType="secondary" />);
     
-    // Check if the gradient colors class is applied when gradientColors is provided
-    const card = screen.getByText(mockTechExpertiseInfo.title).parentElement;
-    expect(card).toHaveClass('gradient-class');
+    const card = screen.getByTestId('tech-expertise-card');
+    expect(card).toHaveClass('bg-gradient-to-tr to-[#62AE6E] from-[#e1d43e]');
+    expect(screen.getByText('Test Title')).toBeInTheDocument();
+    expect(screen.getByText('Test Description')).toBeInTheDocument();
+  });
+
+  it('renders TechExpertiseCard with tertiary cardType', () => {
+    render(<TechExpertiseCard techExpertiseInfo={mockTechExpertiseInfo} cardType="tertiary" />);
+    
+    const card = screen.getByTestId('tech-expertise-card');
+    expect(card).not.toHaveClass('bg-gradient-to-tr');
+    expect(screen.getByText('Test Title')).toBeInTheDocument();
+    expect(screen.getByText('Test Description')).toBeInTheDocument();
   });
 });
