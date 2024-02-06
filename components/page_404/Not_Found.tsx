@@ -28,8 +28,8 @@ const NotFound: React.FC = () => {
             The page you are looking for doesn't exist.  Hang on, we are currently working on it
           </p>
 
-          <div className="flex items-center w-full mt-6 gap-x-3 shrink-0 sm:w-auto">
-            <Link href="/" className="flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border rounded-lg gap-x-2 sm:w-auto dark:hover:bg-gray-800 dark:bg-gray-900 hover:bg-gray-100 dark:text-gray-200 dark:border-gray-700">
+          <div className="flex items-center justify-center w-full mt-6 gap-x-3 shrink-0 sm:w-auto">
+            <Link href="/" className="flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border text-center rounded-lg gap-x-2 sm:w-auto dark:hover:bg-gray-800 dark:bg-gray-900 hover:bg-gray-100 dark:text-gray-200 dark:border-gray-700">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
