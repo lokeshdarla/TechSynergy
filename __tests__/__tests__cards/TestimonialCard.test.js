@@ -11,6 +11,8 @@ const mockTestimonalInfo = {
   role: 'CEO',
 };
 
+jest.mock('next/image', () => ({ src, alt }) => <img src={src} alt={alt} />);
+
 describe('TestimonalCard component', () => {
   beforeEach(() => {
     render(<TestimonalCard testimonalInfo={mockTestimonalInfo} />);

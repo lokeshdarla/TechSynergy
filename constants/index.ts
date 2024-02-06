@@ -23,7 +23,6 @@ export interface TestimonalInfo {
 
 // interfaces/WhyUs.ts
 export interface TechExpertiseInfo {
-  gradientColors?: string;
   title: string;
   description: string;
 }

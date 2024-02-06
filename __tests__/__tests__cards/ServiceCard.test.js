@@ -8,7 +8,7 @@ const mockServiceInfo = {
   icon: '/path/to/test/icon.png',
 };
 
-// Mocking next/image module
+
 jest.mock('next/image', () => ({ src, alt }) => <img src={src} alt={alt} />);
 
 describe('ServiceCard component', () => {
@@ -30,3 +30,5 @@ describe('ServiceCard component', () => {
     expect(image.getAttribute('src')).toBe('/path/to/test/icon.png');
   });
 });
+
+
