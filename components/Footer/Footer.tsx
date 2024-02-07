@@ -3,39 +3,59 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebook, FaAirbnb, FaApple, FaSass, FaQuora } from "react-icons/fa";
 import { FaArrowAltCircleRight } from "react-icons/fa";
-
+import {  TiSocialLinkedin ,TiSocialFacebook,TiSocialTwitter } from "react-icons/ti";
 
 import logo from '@/public/logo.png';
 
 function Footer() {
+
+  const socialLinks=[
+    {
+      id:0,
+      icon: <TiSocialLinkedin size={20}/>,
+      url:"",
+    },
+    {
+      id:1,
+      icon: <TiSocialFacebook size={20}/>,
+      url: ""
+    },
+    {
+      id:2,
+      icon: <TiSocialTwitter size={20}/>,
+      url:""
+    }
+  ]
+
   return (
     <div className='flex items-center justify-center flex-col gap-[40px] md:min-w-[1174px] md:my-5 font-secondary'>
-      <div className='flex flex-col md:flex-row items-start md:justify-between justify-center md:w-[1174px] w-full flex-wrap gap-[10px] '>
-        <div className='flex flex-row-reverse items-start md:gap-[150px] justify-evenly gap-[30px] px-10 md:px-0'>
-        <div className='text-gray-400 flex flex-col gap-[10px] font-secondary leading-[28px] '>
-          <h3 className='text-[#0A142F]'>Product</h3>
-          <p>Employee database</p>
-          <p>Payroll</p>
-          <p>Absences</p>
-          <p>Time tracking</p>
-          <p>Shift planner</p>
-          <p>Recruiting</p>
-        </div>
+      <div className='flex flex-col md:flex-row items-start md:justify-between justify-center md:w-[1174px] w-full gap-[20px] '>
+      <div className='flex flex-col items-start md:gap-[150px] gap-[50px] px-10 md:px-0'>
         <div className='text-gray-400 flex flex-col gap-[10px] font-secondary leading-[28px]'>
           <h3 className='text-[#0A142F]'>Information</h3>
-          <p>FAQ</p>
-          <p>Blog</p>
-          <p>Support</p>
+          <a href="#">FAQ</a>
+          <a href="#">Blog</a>
+          <a href="#">Support</a>
         </div>
-        </div>
-        <div className='text-gray-400 flex flex-col gap-[10px] font-secondary leading-[28px] px-10'>
+        <div className='text-gray-400 flex flex-col gap-[10px] font-secondary leading-[28px]'>
           <h3 className='text-[#0A142F]'>Company</h3>
-          <p>About us</p>
-          <p>Careers</p>
-          <p>Contact us</p>
-          <p>Lift Media</p>
+          <a href="#">About us</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact us</a>
+          <a href="#">Lift Media</a>
         </div>
-        <div className='max-w-[369.47px] min-h-[261.15px] rounded-[30px] bg-[#203C860D] flex flex-col items-start justify-evenly'>
+        <div className='text-gray-400 flex flex-col gap-[10px] font-secondary leading-[28px]'>
+          <h3 className='text-[#0A142F]'>Product</h3>
+          <a href="#">Employee database</a>
+          <a href="#">Payroll</a>
+          <a href="#">Absences</a>
+          <a href="#">Time tracking</a>
+          <a href="#">Shift planner</a>
+          <a href="#">Recruiting</a>
+        </div>
+      </div>
+
+        <div className='max-w-[369.47px] min-h-[261.15px] rounded-[30px] bg-[#203C860D] flex flex-col items-start justify-evenly mx-2.5'>
           <h2 className='text-[16px] text-left px-[43px]'>Subscribe</h2>
           <div className='relative px-[43px]'>
           <input type="text" placeholder='Email address' className='w-[271.09px] px-6 py-4 text-[14px] rounded-full' />
@@ -47,8 +67,9 @@ function Footer() {
         </div>
       </div>
       <hr className='border border-gray-200 w-[1174px]' />
-      <div className='flex items-center md:justify-between md:w-[1174px] flex-wrap-reverse justify-evenly'>
-        <div className='min-w-[236.11px]'>
+
+      <div className='flex md:flex-row items-center md:justify-between md:w-[1174px] flex-col justify-center gap-[15px] mb-[10px]'>
+        <div className=' md:min-w-[200px]'>
         <Image height={50} src={logo} alt="" />
         </div>
         <div className='flex items-center justify-center gap-[40px] text-[14px] text-[#0A142F] w-[236.11px]'>
@@ -56,10 +77,14 @@ function Footer() {
           <Link href="/">Privacy</Link>
           <Link href="/">Cookies</Link>
         </div>
-        <div className='flex items-center justify-center gap-[30px] w-[236.11px]'>
-          <a href=""><FaApple size={30} /></a>
-          <a href=""><FaFacebook size={30} /></a>
-          <a href=""><FaQuora size={30} /></a>
+
+        <div className='flex items-center justify-center gap-[30px]'>
+        {socialLinks.map((social) => (
+          <a key={social.id} href={social.url} className='border border-black p-2 rounded-full hover:bg-black hover:text-white'>
+            {social.icon}
+          </a>
+        ))}
+
         </div>
       </div>
     </div>

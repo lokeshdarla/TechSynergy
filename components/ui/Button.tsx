@@ -1,7 +1,7 @@
 import React from 'react';
 import { useMemo } from 'react';
 
-interface ButtonProps {
+export interface ButtonProps {
   text: string;
   type: 'primary' | 'secondary' | 'tertiary';
   onClick?: () => void;
