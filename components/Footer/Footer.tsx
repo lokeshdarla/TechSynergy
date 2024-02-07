@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaFacebook, FaAirbnb, FaApple, FaSass, FaQuora } from "react-icons/fa";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import {  TiSocialLinkedin ,TiSocialFacebook,TiSocialTwitter } from "react-icons/ti";
 
@@ -30,7 +29,7 @@ function Footer() {
   return (
     <div className='flex items-center justify-center flex-col gap-[40px] md:min-w-[1174px] md:my-5 font-secondary'>
       <div className='flex flex-col md:flex-row items-start md:justify-between justify-center md:w-[1174px] w-full gap-[20px] '>
-      <div className='flex flex-col items-start md:gap-[150px] gap-[50px] px-10 md:px-0'>
+      <div className='flex md:flex-row flex-col items-start md:gap-[150px] gap-[50px] px-10 md:px-0'>
         <div className='text-gray-400 flex flex-col gap-[10px] font-secondary leading-[28px]'>
           <h3 className='text-[#0A142F]'>Information</h3>
           <a href="#">FAQ</a>

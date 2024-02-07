@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const ServiceCard: React.FC<{ serviceInfo: ServiceInfo}> = ({ serviceInfo}) => {
   return (
-    <div className="relative flex flex-col items-start justify-evenly gap-[35px] md:w-[385px] min-w-[250px] md:h-[321px] h-[285px] rounded-[35.39px] shadow-xl md:p-10 p-5 bg-white m-5">
+    <div className="relative flex flex-col items-start justify-evenly gap-[35px] md:w-[385px] min-w-[250px] md:h-[321px] h-[285px] rounded-[35.39px] shadow-xl md:p-10 p-[30px] bg-white m-5">
       <div className="icon-container">
         <Image src={serviceInfo.icon} width={50} height={50} className='md:w-[50px] md:h-[50px] w-[36.48px] h-[36.48px]' alt={serviceInfo.name} />
       </div>

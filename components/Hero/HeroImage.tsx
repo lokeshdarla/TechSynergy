@@ -11,9 +11,10 @@ interface HeroImageProps {
 
 const HeroImage: React.FC<HeroImageProps> = ({ src, alt, width, height }) => {
   return (
-    <div className="rounded-2xl md:overflow-auto">
-      <Image src={hero} alt={alt} width={width} height={height} />
-    </div>
+    <div className="rounded-2xl flex md:h-[600px] h-[400px] overflow-hidden md:w-1/2">
+    <Image src={hero} alt={alt} width={width} height={height} className='w-full object-cover h-full' />
+  </div>
+  
   );
 };
 

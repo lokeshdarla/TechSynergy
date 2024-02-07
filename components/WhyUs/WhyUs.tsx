@@ -28,13 +28,13 @@ function WhyUs() {
         <Image src={vector1} alt='Vector 1' width={90.84} height={80.88} />
       </div>
       <div className=' relative z-10 flex flex-col items-center justify-center'>
-        <h2 className='md:text-[40px] text-[30px] leading-[62px] font-secondary text-center px-[90px]'>
+        <h2 className='md:text-[40px] text-[30px] leading-[62px] font-secondary text-center md:px-[90px] px-[40px]'>
           Choose Us: Your Path to Innovation and
           <span className='text-[#3171DE]'> Success</span>
         </h2>
       </div>
 
-      <div className='flex items-center justify-start gap-10 overflow-x-scroll md:w-[1344px] w-[90%] h-[300px] hide-scrollbar px-5' ref={myRef}>
+      <div className='flex items-center justify-start gap-10 overflow-x-scroll md:w-[1344px] w-[99%] h-[300px] hide-scrollbar pl-10' ref={myRef}>
       {expertiseCardsInfo.map((card, index) => (
         <TechExpertiseCard
           key={index}

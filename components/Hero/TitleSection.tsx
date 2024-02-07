@@ -13,12 +13,12 @@ const TitleSection: React.FC<TitleSectionProps> = ({ title, subtitle, tagline,bu
   return (
     <div
     data-testid='title-section'
-     className=" md:ml-5 gap-[20px] flex flex-col  md:bg-gradient-to-r from-white to-[rgba(255,255,255,0)] via-[rgba(255,255,255,50)] ">
+     className=" md:ml-5 gap-[20px] flex flex-col">
       <h2 className='text-[#F3BC4C] md:text-[20px] text-[12.02px]'>{title}</h2>
-      <h1 className="font-medium md:text-[64px] md:leading-[80px] md:w-[490px] w-[297px] text-[40px] leading-[48.1px]">
+      <h1 className="font-medium md:text-[64px] text-white md:text-black md:leading-[80px] md:w-[490px] w-[297px] text-[40px] leading-[48.1px]">
         {subtitle}
       </h1>
-      <p >{tagline}</p>
+      <p className='text-white md:text-black'>{tagline}</p>
       <div>
         <Button text={buttonText} type="tertiary"  />
       </div>

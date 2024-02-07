@@ -41,11 +41,6 @@ function Organisations() {
            <li className="flex gap-2 text-4xl text-[#A9A9B9] items-center" key={index}>{logo.icon} {logo.name}</li>
         ))}
       </ul>
-      <ul className="md:hidden slider-track flex gap-10 ">
-        {logos.map((logo, index) => (
-           <li className="flex gap-2 text-4xl text-[#A9A9B9] items-center" key={index}>{logo.icon} {logo.name}</li>
-        ))}
-      </ul>
     </div>
     <Button text='Our full repertories' type='primary'/>
       </div>
