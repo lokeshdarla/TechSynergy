@@ -1,10 +1,28 @@
 import React from 'react';
-import Button from '../components/ui/Button';
+import { Meta, Story } from '@storybook/react';
+import Button, { ButtonProps } from './Button';
 
 export default {
-  title: 'Button',
+  title: 'Components/Button',
   component: Button,
+} as Meta;
+
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  text: 'Primary Button',
+  type: 'primary',
 };
 
+export const Secondary = Template.bind({});
+Secondary.args = {
+  text: 'Secondary Button',
+  type: 'secondary',
+};
 
-export  const Primary = () => <Button text="hello word" type='primary'/>
+export const Tertiary = Template.bind({});
+Tertiary.args = {
+  text: 'Tertiary Button',
+  type: 'tertiary',
+};

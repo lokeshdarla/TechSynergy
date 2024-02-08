@@ -1,0 +1,49 @@
+.service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 25px;
+  width: 385px;
+  min-width: 250px;
+  height: auto;
+  border-radius: 35.39px;
+  box-shadow: 0px 16px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background-color: #ffffff;
+  margin: 1.25rem;
+}
+
+.service-image {
+  width: 100px;
+  height: auto;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.service-title {
+  font-size: 30.43px;
+  line-height: 29.18px;
+  font-family: 'YourSecondaryFont', sans-serif;
+}
+
+.md\:service-title {
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.service-description {
+  font-size: 11.67px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #525252;
+}
+
+.md\:service-description {
+  font-size: 1.125rem;
+}

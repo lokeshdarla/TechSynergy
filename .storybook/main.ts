@@ -1,21 +1,22 @@
-module.exports = {
-  "stories": [
-    "../src/**/*.stories.mdx",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)"
-  ],
+import type { StorybookConfig } from "@storybook/nextjs";
 
-  "addons": [
+const config: StorybookConfig = {
+  stories: [
+    "../stories/**/*.mdx",
+    "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+  ],
+  addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/preset-create-react-app"
+    "@storybook/addon-onboarding",
+    "@storybook/addon-interactions",
   ],
-
   framework: {
     name: "@storybook/nextjs",
-    options: {}
+    options: {},
   },
-
   docs: {
-    autodocs: true
-  }
-}
+    autodocs: "tag",
+  },
+};
+export default config;
