@@ -54,7 +54,7 @@ function Footer() {
         </div>
       </div>
 
-        <div className='max-w-[369.47px] min-h-[261.15px] rounded-[30px] bg-[#203C860D] flex flex-col items-start justify-evenly mx-2.5'>
+        <div className='max-w-[369.47px] min-h-[261.15px] rounded-[30px] bg-[#203C860D] flex flex-col items-start justify-evenly px-10'>
           <h2 className='text-[16px] text-left px-[43px]'>Subscribe</h2>
           <div className='relative px-[43px]'>
           <input type="text" placeholder='Email address' className='w-[271.09px] px-6 py-4 text-[14px] rounded-full' />
